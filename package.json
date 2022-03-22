@@ -1,0 +1,23 @@
+{
+	"name": "less-zh_cn",
+	"version": "0.1.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack",
+		"run": "rm -rf dist/* & lessc src/index.less dist/output.css",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Pluto",
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {
+		"css-loader": "^6.7.1",
+		"less": "^4.1.2",
+		"less-loader": "^10.2.0",
+		"mini-css-extract-plugin": "^2.6.0",
+		"style-loader": "^3.3.1",
+		"webpack": "^5.70.0",
+		"webpack-cli": "^4.9.2"
+	}
+}
