@@ -1,0 +1,13 @@
+.set-bg(@color: red, @selector: ''){
+    @str: e(@selector);
+    &.bg@{str} {
+        background-color: @color;
+    }
+}
+
+div {
+    .set-bg(black, ':before');
+    .set-bg(black, ':after');
+    .set-bg(green);
+    .set-bg(blue, '')
+}
