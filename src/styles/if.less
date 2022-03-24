@@ -1,0 +1,10 @@
+// 逻辑函数
+
+// if
+@some: #fff;
+
+div {
+	margin: if((2 > 1), 0, 3px);
+	color: if((iscolor(@some)), @some, black);
+	@selector: if((false), span, ":after");
+}
