@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "webpack",
+		"watch": "webpack",
 		"run": "rm -rf dist/* & lessc src/index.less dist/output.css",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

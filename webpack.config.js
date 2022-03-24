@@ -7,7 +7,7 @@ module.exports = {
 		path: path.resolve(__dirname, "dist"),
 		filename: "bundle.js",
 	},
-	mode: "production",
+	mode: "development",
 	// 监听文件变化
 	watch: true,
 	watchOptions: {
