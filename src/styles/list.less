@@ -1,0 +1,66 @@
+// List function
+
+// length
+
+div {
+	@list: "banana", "tomato", "potato", "peach";
+	n: length(@list);
+}
+
+// exract
+div {
+	@list: apple, pear, coconut, orange;
+	value: extract(@list, 3);
+}
+
+// range
+div {
+	value: range(4);
+	value: range(10px, 30px, 10);
+}
+
+// each
+div {
+	@selectors: blue, green, red;
+
+	each(@selectors, {
+        .sel-@{value} {
+           a: b;
+       }
+    });
+}
+
+div {
+	@set: {
+		one: blue;
+		two: green;
+		three: red;
+	};
+	.set {
+		each(@set, {
+          @{key}-@{index}: @value;
+        });
+	}
+}
+
+div {
+	.set-2() {
+		one: blue;
+		two: green;
+		three: red;
+	}
+	.set-2 {
+		// Call mixin and iterate each rule
+		each(.set-2(), .(@v, @k, @i) {
+          @{k}-@{i}: @v;
+        });
+	}
+}
+
+for {
+	each(range(4), {
+        .col-@{value} {
+          height: (@value * 50px);
+        }
+      });
+}
