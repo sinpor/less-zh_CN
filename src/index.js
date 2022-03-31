@@ -1,4 +1,5 @@
 import "./styles/if.less"
 import "./styles/string.less"
 import "./styles/list.less"
+import "./styles/math.less"
 import "./styles/index.less"
